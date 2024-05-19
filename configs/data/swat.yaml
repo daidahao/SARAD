@@ -1,0 +1,7 @@
+defaults:
+  - default
+
+_target_: src.data.swat_datamodule.SWaTDataModule
+dataset: "SWaT"
+input_size: 51
+percentile: 1

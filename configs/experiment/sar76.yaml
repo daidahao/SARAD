@@ -1,0 +1,19 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /model: sar76
+  # - override /logger: wandb # comment this line if you do not have wandb
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["sar76"]
+
+logger:
+  wandb:
+    project: "sar76"
+
+task_name: "sar76"

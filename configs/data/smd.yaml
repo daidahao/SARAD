@@ -1,0 +1,8 @@
+defaults:
+  - default
+
+_target_: src.data.smd_datamodule.SMDDataModule
+dataset: "SMD"
+input_size: 38
+percentile: 5
+sampling: 0.10

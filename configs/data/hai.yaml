@@ -1,0 +1,8 @@
+defaults:
+  - default
+
+_target_: src.data.hai_datamodule.HAIDataModule
+dataset: "HAI"
+input_size: 79
+percentile: 0.2
+sampling: 0.5

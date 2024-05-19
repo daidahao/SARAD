@@ -1,0 +1,7 @@
+defaults:
+  - default
+
+_target_: src.data.psm_datamodule.PSMDataModule
+dataset: "PSM"
+input_size: 25
+percentile: 1

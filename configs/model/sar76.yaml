@@ -1,0 +1,40 @@
+_target_: src.models.sar76_module.SAR76Module
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.0007
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.StepLR
+  _partial_: true
+  step_size: 1
+  gamma: 0.5
+  verbose: true
+
+net:
+  _target_: src.models.components.sar76.SAR76
+  input_size: ${data.input_size}
+  window_size: ${data.window_size}
+  # transformer hyperparameters
+  model_size: 512
+  num_layers: 3
+  num_heads: 8
+  # progression hyperparameters
+  num_patches: 2
+  # detector hyperparameters
+  detector_size: 64
+  # other hyperparameters
+  dropout: 0.1
+  is_diagnoal_masked: false
+
+diver_weight: 0.0
+detec_weight: 100
+detec_scores: 1.0
+
+# compile model for faster training with pytorch 2.0
+compile: false
+
+dataset: ${data.dataset}
+
+output_dir: ${paths.output_dir}
