@@ -11,6 +11,8 @@
 
 </div>
 
+This is the official repo for **SARAD (NeurIPS 2024)**.
+
 ## Description
 Anomaly detection in time series data is fundamental to the design, deployment, and evaluation of industrial control systems. We propose SARAD, an approach that leverages spatial information beyond data autoencoding errors to improve the detection and diagnosis of anomalies. SARAD trains a Transformer to learn the spatial associations, the pairwise inter-feature relationships which ubiquitously characterize such feedback-controlled systems. As new associations form and old ones dissolve, SARAD applies subseries division to capture their changes over time. Anomalies exhibit association descending patterns, a key phenomenon we exclusively observe and attribute to the disruptive nature of anomalies detaching anomalous features from others. To exploit the phenomenon and yet dismiss non-anomalous descent, SARAD performs anomaly detection via autoencoding in the association space.
 
@@ -47,4 +49,26 @@ You can override any parameter from command line like this
 
 ```bash
 python src/train.py data=smd  data.batch_size=64
+```
+
+## Acknowledgments
+Part of our implementation is adapted from [Volume Under the Surface](https://github.com/TheDatumOrg/VUS) and [PyTorch Tutorials](https://pytorch.org/tutorials/).
+We are grateful for the author of both.
+
+
+## Citation
+
+If you find our work useful, please consider citing our work.
+
+- [SARAD: Spatial Association-Aware Anomaly Detection and Diagnosis for Multivariate Time Series.](https://openreview.net/forum?id=gmf5Aj01Hz) Zhihao Dai, Ligang He, Shuang-Hua Yang, Matthew Leeke, In the Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), 2024.
+
+```BibTeX
+@inproceedings{
+dai2024sarad,
+title={{SARAD}: Spatial Association-Aware Anomaly Detection and Diagnosis for Multivariate Time Series},
+author={Dai, Zhihao and He, Ligang and Yang, Shuanghua and Leeke, Matthew},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=gmf5Aj01Hz}
+}
 ```
