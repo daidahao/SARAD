@@ -53,7 +53,7 @@ python src/train.py data=smd  data.batch_size=64
 
 ## Acknowledgments
 Part of our implementation is adapted from [Volume Under the Surface](https://github.com/TheDatumOrg/VUS) and [PyTorch Tutorials](https://pytorch.org/tutorials/).
-We are grateful for the author of both.
+We are grateful to the authors of both.
 
 
 ## Citation
